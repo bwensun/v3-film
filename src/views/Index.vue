@@ -14,14 +14,28 @@
     <button @click="linkHome()">link-home</button>
     <button @click="linkHome2()">link-about</button>
     <h1 class="less_demo">LESS</h1>
-    <div class="demo">
+    <h1 class="text-rose-900">WINDICSS</h1>
+    <div class="bg-gray-500 demo">
       我是一个DIV
       <span class="test">test</span>
     </div>
+    <el-row class="mb-4">
+      <el-button>Default</el-button>
+      <el-button type="primary">Primary</el-button>
+      <el-button type="success">Success</el-button>
+      <el-button type="info">Info</el-button>
+      <el-button type="warning">Warning</el-button>
+      <el-button type="danger">Danger</el-button>
+      <el-button>中文</el-button>
+    </el-row>
+    <img src="/img/git.png" alt="" />
+    <img src="@/assets/git.png" alt="" />
   </div>
 </template>
 
 <script>
+import axios from "axios";
+
 export default {
   name: "Index",
 
@@ -45,16 +59,19 @@ export default {
   //     route,
   //   }; // 这里返回的任何内容都可以用于组件的其余部分
   // },
+  created() {
+    axios.get("https://v1.hitokoto.cn/").then((response) => {
+      console.log(response.data);
+    });
+  },
 };
 </script>
 
 <style lang="less" scoped>
 @color: red;
 .demo {
-  background-color: antiquewhite;
   .test {
-  color: @color;
+    color: @color;
+  }
 }
-}
-
 </style>
