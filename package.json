@@ -22,6 +22,8 @@
     "eslint": "^6.7.2",
     "eslint-plugin-prettier": "^3.3.1",
     "eslint-plugin-vue": "^7.0.0",
+    "less": "^4.1.2",
+    "less-loader": "7.x",
     "prettier": "^2.2.1",
     "webpack": "^5.69.0",
     "webpack-cli": "^4.9.2"

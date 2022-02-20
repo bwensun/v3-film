@@ -1,6 +1,5 @@
 import request from "@/utils/request";
 import axios from "axios";
-// import { axios } from "vue/types/umd";
 
 //电影分页查询
 export function getFilmList(pageNo, pageSize) {

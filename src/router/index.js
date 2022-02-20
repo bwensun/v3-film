@@ -1,13 +1,30 @@
 import Home from "@/components/Home";
 import About from "@/components/About";
-import {createRouter, createWebHashHistory } from "vue-router";
+import User from "@/components/User";
+import { createRouter, createWebHashHistory } from "vue-router";
 
 export const routes = [
-  { path: "/home", component: Home },
-  { path: "/about", component: About },
+  {
+    path: "/",
+    component: Home,
+    name: "home",
+    meta: { needAuth: false },
+  },
+  {
+    path: "/about",
+    name: "about",
+    component: About,
+    meta: { needAuth: false },
+  },
+  {
+    path: "/user/:id",
+    component: User,  
+    name: "user",
+    meta: { needAuth: false },
+  },
 ];
 
- const router = createRouter({
+const router = createRouter({
   history: createWebHashHistory(),
   routes: routes,
 });
